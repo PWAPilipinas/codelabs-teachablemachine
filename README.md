@@ -1,2 +1,1 @@
-# codelabs-teachablemachine
-Teachable Machine + Progressive Web App
+# Teachable Machine + Progressive Web App
