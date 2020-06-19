@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "echo PWA Pilipinas Codelabs: Teachable Machine + Progressive Web Apps && http-server ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/pwa-pilipinas/codelabs-teachablemachine/issues"
   },
-  "homepage": "https://github.com/pwa-pilipinas/codelabs-teachablemachine#readme"
+  "homepage": "https://github.com/pwa-pilipinas/codelabs-teachablemachine#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
 }
