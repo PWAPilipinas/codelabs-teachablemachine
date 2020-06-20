@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "echo PWA Pilipinas Codelabs: Teachable Machine + Progressive Web Apps && http-server ./src",
+    "start": "echo PWA Pilipinas Codelabs: Teachable Machine + Progressive Web Apps && http-server ./src -a 0.0.0.0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
