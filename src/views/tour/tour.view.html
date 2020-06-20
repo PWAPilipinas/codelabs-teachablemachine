@@ -1,0 +1,101 @@
+<style>
+    hemlo-bar {
+        background-color: black;
+        box-shadow: none;
+    }
+
+    #webcam-container {
+        box-sizing: border-box;
+        height: 100vh;
+        overflow: hidden;
+        width: 100vw;
+        padding-top: 65px;
+        background-color: black;
+    }
+
+    canvas {
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        object-fit: fill;
+    }
+
+    .info-container {
+        bottom: 0;
+        position: fixed;
+        z-index: 999999;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        width: 100vw;
+        background-color: black;
+    }
+
+    .result {
+        background-color: white;
+        border-radius: 12px;
+        padding: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .tour.button_container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .tour.button_container > button {
+        width: 100%;
+        border: 0;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 12px;
+        background-color: silver;
+        transition: background-color 0.2s;
+    }
+
+    .tour.button_container > button:hover {
+        background-color: #9a9a9a;
+        outline: none;
+    }
+    .tour.button_container > button:focus {
+        outline: none;
+    }
+</style>
+
+<hemlo-bar>
+    <h3>
+        <a href="javascript:void(0)" onclick="tour.close()">
+            <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L4 10L12 18L10 20L0 10L10 0L12 2Z" fill="#ffffff"/>
+            </svg>
+        </a>
+    </h3>
+</hemlo-bar>
+
+<div id="webcam-container">
+    <h2 style="text-align:center; margin-top: 60px; color: white;" class="webcam-loading">
+        Loading...<br>
+        Use this time to look for a painting or sculpture
+    </h2>
+</div>
+
+<div class="tour info-container" style="display: none;">
+    <div class="empty-result" style="margin-bottom: 20px;">
+        <h2 style="text-align:center; color: white;">
+            Point your camera to a painting<br>or a sculpture.
+        </h2>
+    </div>
+    <div class="result" style="display: none;">
+        <h3 style="text-align: center" id="result_name">Sculpture Name</h3>
+        <p id="result_description">The quick brown fox jumps over the lazy dog.</p>
+        <div class="tour button_container">
+            <button onclick="tour.shareResult()">Share to Friends</button>
+            <button onclick="tour.moreInfo()">More Information</button>
+            <button onclick="tour.hideResult()">Hide</button>
+        </div>
+    </div>
+</div>
